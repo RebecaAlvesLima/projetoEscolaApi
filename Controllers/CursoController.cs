@@ -62,7 +62,7 @@ namespace projetoEscolaAPI.Controllers
             }
         }
 
-        [HttpPut("CursoId")]
+        [HttpPut("{CursoId}")]
         public async Task<IActionResult> put(int CursoId, Curso dadosCursoAlt){
             try {
                 var result = await _context.Curso.FindAsync(CursoId);
